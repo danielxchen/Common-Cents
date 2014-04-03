@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Common Cents</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="enter_login">Enter Login Information</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_text">New User? Click here to register</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="register">Register</string>
+    <string name="register_username">Enter username</string>
+    <string name="register_password">Enter password</string>
+    <string name="valid_password">Password must be at least 8 characters long and include letters and numbers</string>
+    <string name="register_name">Enter name</string>
+    <string name="register_email">Enter email</string>
+    <string name="register_button">Register</string>
+    <string name="so_ace">So Fucking Ace</string>
+    <string name="view_history">View Transaction History</string>
+    <string name="add_account">Add Account</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add_account">AddAccountActivity</string>
+    <string name="new_account">New Account</string>
+    <string name="account_name">Enter account name</string>
+    <string name="balance">Enter starting balance</string>
+    <string name="interest">Enter interest rate</string>
+    <string name="accept_button">Accept</string>
+    <string name="decline_button">Decline</string>
+    <string name="account_info">Account Info</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="from_date">From Date:</string>
+    <string name="to_date">To Date:</string>
+    <string name="submit_button">Submit</string>
+    <string name="make_transaction">Make a Transaction</string>
+    <string name="amount">Amount</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="deposit">Deposit</string>
+    <string name="date">Enter Date</string>
+    <string name="title_activity_transaction_history">TransactionHistoryActivity</string>
+    <string name="withdrawal_history">Withdrawal History</string>
+    <string name="deposit_history">Deposit History</string>
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3385FF" >
+     
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+        android:text="@string/withdrawal_history"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_gravity="center_horizontal"
+    	android:background="@drawable/border"
+    	android:orientation="vertical" >
+    	
+        <LinearLayout
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal">
+    	
+	    	<Button
+		        android:id="@+id/fromDateButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="10dp"
+		        android:layout_gravity="left"
+		        android:text="@string/from_date"
+		        android:textSize="20sp" />
+			
+		    <TextView
+		        android:id="@+id/fromDateText"
+		        android:layout_width="120dp"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="10dp"
+		        android:paddingTop="8dp"
+		        android:layout_gravity="left"
+		        android:textSize="20sp" />
+		    
+		    <Button
+		        android:id="@+id/toDateButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="10dp"
+		        android:layout_gravity="left"
+		        android:text="@string/to_date"
+		        android:textSize="20sp" />
+			
+		    <TextView
+		        android:id="@+id/toDateText"
+		        android:layout_width="120dp"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="8dp"
+		        android:layout_gravity="left"
+		        android:textSize="20sp" />
+		    
+		</LinearLayout>
+		
+        <Button 
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="right"
+		    android:text="@string/submit_button"
+		    android:textSize="20sp" />
+		
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_gravity="center_horizontal"
+    	android:background="@drawable/border"
+    	android:orientation="vertical" >
+        
+        <TextView
+	        android:id="@+id/transaction_history"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:textSize="20sp" />
+        
+    </LinearLayout>
+     
+</LinearLayout>

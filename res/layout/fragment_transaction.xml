@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_transaction"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1975FF" >
+     
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/make_transaction"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_gravity="center_horizontal"
+    	android:background="@drawable/border"
+    	android:orientation="vertical" >
+    
+	    <EditText 
+	        android:id="@+id/transaction"
+	        android:hint="@string/amount"
+	   		android:inputType="numberDecimal"
+	   		android:layout_width="match_parent"
+	   		android:layout_height="wrap_content"
+	   		android:layout_marginTop="8dp" />
+	    
+	    <RadioGroup 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+	    
+		    <RadioButton android:id="@+id/withdraw"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/withdraw" />
+		    
+		    <RadioButton android:id="@+id/deposit"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/deposit" />
+		</RadioGroup>
+		
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal">
+    	
+	    	<Button
+		        android:id="@+id/dateButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="10dp"
+		        android:layout_gravity="left"
+		        android:text="@string/date"
+		        android:textSize="20sp" />
+			
+		    <TextView
+		        android:id="@+id/dateText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="left"
+		        android:textSize="20sp" />
+		    
+		</LinearLayout>
+	
+	</LinearLayout>
+
+    <Button 
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:text="@string/accept_button"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    
+    <Button 
+        android:id="@+id/declineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:text="@string/decline_button"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+     
+ 
+</LinearLayout>
