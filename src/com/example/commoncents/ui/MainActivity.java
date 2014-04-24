@@ -1,6 +1,7 @@
 package com.example.commoncents.ui;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import com.example.commoncents.R;
 import com.example.sqlite.helper.DatabaseHelper;
@@ -10,6 +11,7 @@ import com.example.sqlite.model.User;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ActionBar.LayoutParams;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +21,8 @@ import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
 
 /**
@@ -133,4 +137,27 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    public void changeLocale(MenuItem item) {
+    	Locale current = getResources().getConfiguration().locale;
+    	if (current.equals(new Locale("es")))
+    	{
+    		setLocale("en");
+    	}
+    	else
+    	{
+    		setLocale("es");
+    	}
+    }
+    
+    private void setLocale(String lang) { 
+    	Locale myLocale = new Locale(lang); 
+    	Resources res = getResources(); 
+    	DisplayMetrics dm = res.getDisplayMetrics(); 
+    	Configuration conf = res.getConfiguration(); 
+    	conf.locale = myLocale; 
+    	res.updateConfiguration(conf, dm); 
+    	Intent refresh = new Intent(this, MainActivity.class); 
+    	startActivity(refresh); 
+    } 
 }

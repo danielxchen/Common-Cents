@@ -1,5 +1,7 @@
 package com.example.commoncents.ui;
 
+import java.util.Locale;
+
 import com.example.commoncents.R;
 import com.example.sqlite.helper.DatabaseHelper;
 import com.example.sqlite.model.Account;
@@ -7,6 +9,9 @@ import com.example.sqlite.model.Account;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,8 +61,8 @@ public class AddAccountActivity extends Activity {
         String startingBalance =
                 startingBalanceText.getText().toString();
         String interest = interestText.getText().toString();
-        if (!accountName.equals("") &&
-            !startingBalance.equals("") && !interest.equals("")) {
+        if (!accountName.equals("")
+            && !startingBalance.equals("") && !interest.equals("")) {
             double startingBalanceNum =
                     Double.parseDouble(startingBalance);
             double interestNum = Double.parseDouble(interest);
@@ -117,5 +122,28 @@ public class AddAccountActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    public void changeLocale(MenuItem item) {
+    	Locale current = getResources().getConfiguration().locale;
+    	if (current.equals(new Locale("es")))
+    	{
+    		setLocale("en");
+    	}
+    	else
+    	{
+    		setLocale("es");
+    	}
+    }
+    
+    private void setLocale(String lang) { 
+    	Locale myLocale = new Locale(lang); 
+    	Resources res = getResources(); 
+    	DisplayMetrics dm = res.getDisplayMetrics(); 
+    	Configuration conf = res.getConfiguration(); 
+    	conf.locale = myLocale; 
+    	res.updateConfiguration(conf, dm); 
+    	Intent refresh = new Intent(this, AddAccountActivity.class); 
+    	startActivity(refresh); 
+    } 
 
 }

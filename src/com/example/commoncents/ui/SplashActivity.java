@@ -42,9 +42,9 @@ public class SplashActivity extends Activity {
             }
         }, TIME_OUT);
 
-        //mp = MediaPlayer.create(getBaseContext(),
-        //R.drawable.everything_is_awesome);
-        //mp.start();
+        mp = MediaPlayer.create(getBaseContext(),
+        R.drawable.everything_is_awesome);
+        mp.start();
     }
 
     /**
@@ -52,7 +52,7 @@ public class SplashActivity extends Activity {
      */
     protected final void onPause() {
         super.onPause();
-        //mp.release();
+        mp.release();
         finish();
     }
 }

@@ -1,5 +1,6 @@
 package com.example.commoncents.ui;
 
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,6 +11,9 @@ import com.example.sqlite.model.User;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -82,11 +86,7 @@ public class RegisterActivity extends Activity {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         } else {
-            StringBuffer buffer = new StringBuffer();
-            if (db.containsUser(username)) {
-                buffer.append("Username already taken");
-            }
-            Toast.makeText(RegisterActivity.this, buffer.toString(),
+            Toast.makeText(RegisterActivity.this, "Invalid information",
                 Toast.LENGTH_SHORT).show();
         }
     }
@@ -139,5 +139,28 @@ public class RegisterActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    public void changeLocale(MenuItem item) {
+    	Locale current = getResources().getConfiguration().locale;
+    	if (current.equals(new Locale("es")))
+    	{
+    		setLocale("en");
+    	}
+    	else
+    	{
+    		setLocale("es");
+    	}
+    }
+    
+    private void setLocale(String lang) { 
+    	Locale myLocale = new Locale(lang); 
+    	Resources res = getResources(); 
+    	DisplayMetrics dm = res.getDisplayMetrics(); 
+    	Configuration conf = res.getConfiguration(); 
+    	conf.locale = myLocale; 
+    	res.updateConfiguration(conf, dm); 
+    	Intent refresh = new Intent(this, RegisterActivity.class); 
+    	startActivity(refresh); 
+    } 
 }
 

@@ -16,5 +16,30 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="BurdellTheme" parent="android:Theme.Holo">
+	<item name="android:actionBarTabBarStyle">@style/tabBarStyle</item>
+	<item name="android:actionBarTabStyle">@style/tabStyle</item>
+	<item name="android:button">@style/buttonStyle</item>
+	</style>
+
+<style name="actionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" >
+	<item name="android:background">@color/white</item>
+</style>
+
+<style name="tabBarStyle" parent="@android:style/Widget.ActionBar.TabBar" >
+	<item name="android:background">@color/gold</item>
+</style>
+
+<style name="tabStyle" parent="@android:style/Widget.ActionBar.TabView" >
+	<item name="android:background">@color/white</item>
+	<item name="android:textColor">@color/black</item>
+</style>
+
+<style name="buttonStyle" parent="@android:style/Widget.Button" >
+	<item name="android:textColor">@color/black</item>
+	<item name="android:background">@drawable/custom_button</item>
+	<item name="android:padding">10dp</item>
+</style>
 
 </resources>

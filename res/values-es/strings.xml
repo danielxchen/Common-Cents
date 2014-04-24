@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Común Centavos</string>
+    <string name="action_language">Cambiar el Idioma</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="enter_login">Introduzca la Información de Conexión</string>
+    <string name="enter_username">Nombre de Usuario</string>
+    <string name="enter_password">Contraseña</string>
+    <string name="login_button">Conexión</string>
+    <string name="register_text">¿Usuario Nuevo? Haga Clic Aquí Para Registrarse</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="register">Registro</string>
+    <string name="register_username">Entre en el Nombre de Usuario</string>
+    <string name="register_password">Entre en la Contraseña</string>
+    <string name="valid_password">La Contraseña Debe ser por lo Menos Ocho Caracteres de Longitud y Contienen Números y Letras</string>
+    <string name="register_name">Entre la Nombre</string>
+    <string name="register_email">Entre Correo Electrónico</string>
+    <string name="register_button">Registro</string>
+    <string name="view_history">Ver el Historial de Transacciones</string>
+    <string name="add_account">Agregar Cuenta</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_add_account">AddAccountActivity</string>
+    <string name="new_account">Cuenta Nuevo</string>
+    <string name="account_name">Entre en el Nombre de la Cuenta</string>
+    <string name="balance">Entre en el Equilibrio Inicial</string>
+    <string name="interest">Entre en la Tasa de Interés</string>
+    <string name="accept_button">Aceptar</string>
+    <string name="decline_button">Declinar</string>
+    <string name="account_info">Información de Cuenta</string>
+    <string name="transaction_history">Historia de la Transacción</string>
+    <string name="from_date">Desde la Fecha:</string>
+    <string name="to_date">Hasta la Fecha:</string>
+    <string name="submit_button">Presentar</string>
+    <string name="make_transaction">Hacer una Transacción</string>
+    <string name="amount">Cantidad</string>
+    <string name="withdraw">Retirar</string>
+    <string name="deposit">Depósito</string>
+    <string name="date">Entre en la Fecha</string>
+    <string name="title_activity_transaction_history">TransactionHistoryActivity</string>
+    <string name="withdrawal_history">Historia de la Retirar</string>
+    <string name="deposit_history">Historia de la Depósito</string>
+
+</resources>

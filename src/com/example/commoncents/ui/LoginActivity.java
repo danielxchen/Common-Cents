@@ -1,5 +1,7 @@
 package com.example.commoncents.ui;
 
+import java.util.Locale;
+
 import com.example.commoncents.R;
 import com.example.sqlite.helper.DatabaseHelper;
 import com.example.sqlite.model.User;
@@ -7,7 +9,11 @@ import com.example.sqlite.model.User;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -90,7 +96,30 @@ public class LoginActivity extends Activity {
     public final boolean onCreateOptionsMenu(final Menu menu) {
         // Inflate the menu; this adds items to the
         // action bar if it is present.
-        getMenuInflater().inflate(R.menu.welcome, menu);
+        getMenuInflater().inflate(R.menu.login, menu);
         return true;
     }
+    
+    public void changeLocale(MenuItem item) {
+    	Locale current = getResources().getConfiguration().locale;
+    	if (current.equals(new Locale("es")))
+    	{
+    		setLocale("en");
+    	}
+    	else
+    	{
+    		setLocale("es");
+    	}
+    }
+    
+    private void setLocale(String lang) { 
+    	Locale myLocale = new Locale(lang); 
+    	Resources res = getResources(); 
+    	DisplayMetrics dm = res.getDisplayMetrics(); 
+    	Configuration conf = res.getConfiguration(); 
+    	conf.locale = myLocale; 
+    	res.updateConfiguration(conf, dm); 
+    	Intent refresh = new Intent(this, LoginActivity.class); 
+    	startActivity(refresh); 
+    } 
 }

@@ -9,7 +9,13 @@ import android.support.v4.app.FragmentPagerAdapter;
  * @author Daniel
  *
  */
+
 public class AccountTabsPagerAdapter extends FragmentPagerAdapter {
+
+    /**
+     * Number of tabs.
+     */
+    private static final int NUMBER_TABS = 3;
 
     /**
      * Constructor.
@@ -44,6 +50,6 @@ public class AccountTabsPagerAdapter extends FragmentPagerAdapter {
      * @return 3
      */
     public final int getCount() {
-        return 3;
+        return NUMBER_TABS;
     }
 }
